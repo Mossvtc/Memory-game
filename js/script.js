@@ -47,11 +47,11 @@ function shuffle(array) {
 
 
 // @description shuffles cards when page is refreshed / loads
-document.body.onload = startGame();
+document.body.onload = gameStart();
 
 
 // @description function to start a new play 
-function startGame(){
+function gameStart(){
     // shuffle deck
     cards = shuffle(cards);
     // remove all exisiting classes from each card
@@ -81,7 +81,7 @@ function startGame(){
 
 
 // @description toggles open and show class to display cards
-var displayCard = function (){
+var cardDisplay = function (){
     this.classList.toggle("open");
     this.classList.toggle("show");
     this.classList.toggle("disabled");
@@ -89,7 +89,7 @@ var displayCard = function (){
 
 
 // @description add opened cards to OpenedCards list and check if cards are match or not
-function cardOpen() {
+function openCard() {
     openedCards.push(this);
     var len = openedCards.length;
     if(len === 2){
@@ -222,7 +222,7 @@ function congratulations(){
 function closeModal(){
     closeicon.addEventListener("click", function(e){
         modal.classList.remove("show");
-        startGame();
+        gameStart();
     });
 }
 
@@ -230,14 +230,14 @@ function closeModal(){
 // @desciption for user to play Again 
 function playAgain(){
     modal.classList.remove("show");
-    startGame();
+    gameStart();
 }
 
 
 // loop to add event listeners to each card
 for (var i = 0; i < cards.length; i++){
     card = cards[i];
-    card.addEventListener("click", displayCard);
-    card.addEventListener("click", cardOpen);
+    card.addEventListener("click", cardDisplay);
+    card.addEventListener("click", openCard);
     card.addEventListener("click",congratulations);
 };
