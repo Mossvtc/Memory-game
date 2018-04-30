@@ -23,7 +23,7 @@ let matchedCard = document.getElementsByClassName("match");
  let closeicon = document.querySelector(".close");
 
  // declare modal
- let modal = document.getElementById("popup1")
+ let modal = document.getElementById("popup1");
 
  // array for opened cards
 var openedCards = [];
@@ -72,7 +72,7 @@ function gameStart(){
     }
     //reset timer
     second = 0;
-    minute = 0; 
+    minute = 0;
     hour = 0;
     var timer = document.querySelector(".timer");
     timer.innerHTML = "0 mins 0 secs";
@@ -100,7 +100,7 @@ function openCard() {
             unmatched();
         }
     }
-};
+}
 
 
 // @description when cards match
@@ -151,7 +151,7 @@ function moveCounter(){
     moves++;
     counter.innerHTML = moves;
     //start timer on first click
-    if(moves == 1){
+    if(moves === 1){
         second = 0;
         minute = 0; 
         hour = 0;
@@ -181,7 +181,7 @@ var timer = document.querySelector(".timer");
 var interval;
 function startTimer(){
     interval = setInterval(function(){
-        timer.innerHTML = minute+"mins "+second+"secs";
+        timer.innerHTML = minute+" mins "+second+" secs";
         second++;
         if(second == 60){
             minute++;
@@ -214,7 +214,7 @@ function congratulations(){
 
         //closeicon on modal
         closeModal();
-    };
+    }
 }
 
 
@@ -240,4 +240,4 @@ for (var i = 0; i < cards.length; i++){
     card.addEventListener("click", cardDisplay);
     card.addEventListener("click", openCard);
     card.addEventListener("click",congratulations);
-};
+}
