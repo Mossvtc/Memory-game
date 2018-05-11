@@ -92,6 +92,15 @@ var cardDisplay = function (){
 function openCard() {
     openedCards.push(this);
     var len = openedCards.length;
+	
+	// @igor znaci ako je otvorena 1 karta i nije odigran jos nijedan potez, znaci da je ovo prvi potez pa startam timer
+	if (counter.innerHTML == 0 && len == 1) {
+		second = 0;
+        minute = 0; 
+        hour = 0;
+        startTimer();
+	}
+	
     if(len === 2){
         moveCounter();
         if(openedCards[0].type === openedCards[1].type){
@@ -152,10 +161,10 @@ function moveCounter(){
     counter.innerHTML = moves;
     //start timer on first click
     if(moves === 1){
-        second = 0;
-        minute = 0; 
-        hour = 0;
-        startTimer();
+       // second = 0;
+       // minute = 0; 
+       // hour = 0;
+       // startTimer();
     }
     // setting rates based on moves
     if (moves > 8 && moves < 12){
