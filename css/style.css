@@ -226,7 +226,7 @@ h1 {
 
 @media (max-width: 320px) {
     .deck {
-        width: 85%;
+        width: 25%;
     }
 
     .deck .card {

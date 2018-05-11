@@ -16,17 +16,17 @@ const stars = document.querySelectorAll(".fa-star");
 // declaring variable of matchedCards
 let matchedCard = document.getElementsByClassName("match");
 
- // stars list
- let starsList = document.querySelectorAll(".stars li");
+// stars list
+let starsList = document.querySelectorAll(".stars li");
 
- // close icon in modal
- let closeicon = document.querySelector(".close");
+// close icon in modal
+let closeicon = document.querySelector(".close");
 
- // declare modal
- let modal = document.getElementById("popup1");
+// declare modal
+let modal = document.getElementById("popup1");
 
- // array for opened cards
-var openedCards = [];
+// array for opened cards
+let openedCards = [];
 
 
 // Shuffle function from http://stackoverflow.com/a/2450976
