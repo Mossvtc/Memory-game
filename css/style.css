@@ -223,15 +223,45 @@ h1 {
 /****** Media queries
 ***************************/
 
+@media (min-width: 319px) and (max-width: 374px) {
+    .container {
+        font-size: 12px;
+    }
 
-@media (max-width: 320px) {
     .deck {
-        width: 25%;
+        width: 85%;
     }
 
     .deck .card {
-        height: 4.7rem;
-        width: 4.7rem;
+        height: 3.2rem;
+        width: 3.2rem;
+    }
+}
+
+
+@media (min-width: 375px) and (max-width: 424px) {
+    .container {
+        font-size: 15px;
+    }
+
+    .deck {
+        width: 85%;
+    }
+
+    .deck .card {
+        height: 4rem;
+        width: 4rem;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 524px) {
+    .deck {
+        width: 85%;
+    }
+
+    .deck .card {
+        height: 4.5rem;
+        width: 4.5rem;
     }
 }
 
